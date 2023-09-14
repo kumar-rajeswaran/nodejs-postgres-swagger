@@ -50,32 +50,7 @@
 				"type": "object",
 				"description": "Make all properties in T optional"
 			},
-			"IUsers": {
-				"properties": {
-					"id": {
-						"type": "number",
-						"format": "double"
-					},
-					"name": {
-						"type": "string"
-					},
-					"email": {
-						"type": "string"
-					},
-					"password": {
-						"type": "string"
-					}
-				},
-				"required": [
-					"id",
-					"name",
-					"email",
-					"password"
-				],
-				"type": "object",
-				"additionalProperties": false
-			},
-			"IApiResponse_IUsers_": {
+			"IApiResponse_Partial_IUsers__": {
 				"properties": {
 					"status": {
 						"type": "number",
@@ -87,7 +62,7 @@
 					"data": {
 						"allOf": [
 							{
-								"$ref": "#/components/schemas/IUsers"
+								"$ref": "#/components/schemas/Partial_IUsers_"
 							}
 						],
 						"nullable": true
@@ -120,7 +95,7 @@
 				"type": "object",
 				"additionalProperties": false
 			},
-			"IApiResponse_IUsers-Array_": {
+			"IApiResponse_Partial_IUsers_-Array_": {
 				"properties": {
 					"status": {
 						"type": "number",
@@ -131,7 +106,7 @@
 					},
 					"data": {
 						"items": {
-							"$ref": "#/components/schemas/IUsers"
+							"$ref": "#/components/schemas/Partial_IUsers_"
 						},
 						"type": "array",
 						"nullable": true
@@ -208,7 +183,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/IApiResponse_IUsers_"
+									"$ref": "#/components/schemas/IApiResponse_Partial_IUsers__"
 								}
 							}
 						}
@@ -240,7 +215,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/IApiResponse_IUsers-Array_"
+									"$ref": "#/components/schemas/IApiResponse_Partial_IUsers_-Array_"
 								}
 							}
 						}

@@ -9,9 +9,6 @@ import { IUsers } from "../entities";
 export class UserService {
   private static _userService: UserService | null = null;
   private _userContext = new CrudService<Partial<IUsers>>("users");
-  constructor() {
-    throw new Error("use getInstance() method!");
-  }
   public static getInstance() {
     if (!this._userService) {
       this._userService = new UserService();

@@ -1,6 +1,6 @@
 import { sql } from "slonik";
 import { _dbContext } from "../configs";
-import { IUsers } from "../types";
+import { IUsers } from "../entities";
 
 export default class CrudService<T extends object> {
   constructor(private tableName: string) {}

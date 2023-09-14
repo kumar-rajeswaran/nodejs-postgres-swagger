@@ -28,23 +28,12 @@ const models: TsoaRoute.Models = {
         "type": {"dataType":"nestedObjectLiteral","nestedProperties":{"id":{"dataType":"double"},"name":{"dataType":"string"},"email":{"dataType":"string"},"password":{"dataType":"string"}},"validators":{}},
     },
     // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-    "IUsers": {
-        "dataType": "refObject",
-        "properties": {
-            "id": {"dataType":"double","required":true},
-            "name": {"dataType":"string","required":true},
-            "email": {"dataType":"string","required":true},
-            "password": {"dataType":"string","required":true},
-        },
-        "additionalProperties": false,
-    },
-    // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-    "IApiResponse_IUsers_": {
+    "IApiResponse_Partial_IUsers__": {
         "dataType": "refObject",
         "properties": {
             "status": {"dataType":"double","required":true},
             "token": {"dataType":"string"},
-            "data": {"dataType":"union","subSchemas":[{"ref":"IUsers"},{"dataType":"enum","enums":[null]}],"required":true},
+            "data": {"dataType":"union","subSchemas":[{"ref":"Partial_IUsers_"},{"dataType":"enum","enums":[null]}],"required":true},
             "error": {"dataType":"union","subSchemas":[{"dataType":"string"},{"dataType":"enum","enums":[null]}]},
         },
         "additionalProperties": false,
@@ -59,12 +48,12 @@ const models: TsoaRoute.Models = {
         "additionalProperties": false,
     },
     // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-    "IApiResponse_IUsers-Array_": {
+    "IApiResponse_Partial_IUsers_-Array_": {
         "dataType": "refObject",
         "properties": {
             "status": {"dataType":"double","required":true},
             "token": {"dataType":"string"},
-            "data": {"dataType":"union","subSchemas":[{"dataType":"array","array":{"dataType":"refObject","ref":"IUsers"}},{"dataType":"enum","enums":[null]}],"required":true},
+            "data": {"dataType":"union","subSchemas":[{"dataType":"array","array":{"dataType":"refAlias","ref":"Partial_IUsers_"}},{"dataType":"enum","enums":[null]}],"required":true},
             "error": {"dataType":"union","subSchemas":[{"dataType":"string"},{"dataType":"enum","enums":[null]}]},
         },
         "additionalProperties": false,
